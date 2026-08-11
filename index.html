@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUZZ - E-commerce Store Development & Marketing Agency</title>
+    <meta name="description" content="We help Pakistani retail businesses transition into high-converting e-commerce brands with Shopify development, Meta Ads, and full storefront management.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="custom-cursor-dot" id="customCursorDot"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-highlight">B</span>UZZ<span class="logo-dot">.</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#why-us" class="nav-link">Why Us</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#pricing" class="nav-link">Packages</a>
+                <a href="#contact" class="nav-link">Get a Quote</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-nav">
+                    <span class="btn-text">Free Strategy Call</span>
+                    <span class="btn-dot"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">
+                <span class="fade-in-text">Take Your Business Online.</span><br>
+                <span class="gradient-text">Scale Your Sales Nationwide.</span>
+            </h1>
+            
+            <p class="hero-subtext" style="color: var(--text-secondary); max-width: 800px; margin: 0 auto 30px auto; font-size: 1.15rem; line-height: 1.6; font-family: var(--font-body);">
+                We help Pakistani retail businesses transition into high-converting e-commerce brands. From custom Shopify development to data-driven Meta marketing, we build and manage your entire digital storefront.
+            </p>
+
+            <!-- Hero Ticker -->
+            <div class="ticker-container">
+                <div class="ticker-wrapper" id="tickerWrapper">
+                    <div class="ticker-item">Shopify Store Setup</div>
+                    <div class="ticker-item">Meta Ads Management</div>
+                    <div class="ticker-item">E-commerce Management</div>
+                    <div class="ticker-item">Sales Optimization</div>
+                    <div class="ticker-item">Payment Gateway Integration</div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div style="margin-bottom: 50px;">
+                <a href="#contact" class="btn btn-submit" style="display: inline-flex; text-decoration: none;">Book Your Free Strategy Call</a>
+            </div>
+
+            <!-- Hero Video Block -->
+            <div class="hero-video-container" id="heroVideoBlock">
+                <div class="video-overlay">
+                    <span class="play-hint">HOVER TO PLAY</span>
+                </div>
+                <!-- Royalty free high quality tech abstract video -->
+                <video id="heroVideo" class="hero-video" loop muted playsinline>
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-laser-lights-background-32104-large.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button class="sound-toggle" id="soundToggle" aria-label="Toggle Sound">
+                    <svg class="sound-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM12 4L9.91 6.09 12 8.18V4zm-8 8H6l5 5v-4.18l-5-5H4v4zm15.5 0c0 3.07-1.9 5.7-4.63 6.77l1.05 1.05C19.78 18.25 22 15.39 22 12s-2.22-6.25-5.08-7.82l-1.05 1.05c2.73 1.07 4.63 3.7 4.63 6.77z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Limit Your Sales Section -->
+    <section class="work-section" id="why-us" style="background-color: #0b0b0f; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <div class="container">
+            <div class="services-wrapper" style="align-items: center; gap: 50px;">
+                <div class="services-left">
+                    <h2 class="section-title">Why Limit Your Sales to One City?</h2>
+                    <p class="section-subtitle" style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px;">
+                        Running a successful physical store takes hard work, but foot traffic has its limits. In Pakistan’s rapidly growing digital market, your next best customer could be hundreds of kilometers away.
+                    </p>
+                    <p class="section-subtitle" style="font-size: 1.1rem; line-height: 1.7;">
+                        We bridge that gap. We act as your dedicated, outsourced e-commerce team—handling the technical heavy lifting, building a premium web presence, and driving targeted traffic directly to your checkout page so you can focus on inventory and fulfillment.
+                    </p>
+                </div>
+                <div class="services-right" style="padding: 0; min-height: auto; border: none; background: transparent; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: linear-gradient(135deg, rgba(255, 0, 127, 0.15), rgba(0, 240, 255, 0.15)); border: 1px solid var(--glass-border); border-radius: 24px; padding: 48px; text-align: center; max-width: 450px;">
+                        <h3 style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 10px;">220M+</h3>
+                        <p style="color: var(--text-primary); font-weight: 600; margin-bottom: 20px; font-size: 1.05rem;">Potential Customers in Pakistan</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">Tap into a nationwide audience from Karachi to Peshawar with high-converting online campaigns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="services-wrapper">
+                <div class="services-left">
+                    <h2 class="section-title">Our Core Services</h2>
+                    <p class="section-subtitle">We design, build, and scale retail stores into digital market leaders.</p>
+                    
+                    <div class="services-stack" id="servicesStack">
+                        <div class="stack-item active" data-target="dev">
+                            <h3>01 / Store Development (Shopify & Custom)</h3>
+                        </div>
+                        <div class="stack-item" data-target="marketing">
+                            <h3>02 / High-ROI Meta Marketing</h3>
+                        </div>
+                        <div class="stack-item" data-target="management">
+                            <h3>03 / End-to-End E-commerce Management</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-right">
+                    <!-- Development Panel -->
+                    <div class="service-detail-panel active" id="detail-dev">
+                        <div class="detail-icon">💻</div>
+                        <h4 class="detail-title">Store Development (Shopify & Custom)</h4>
+                        <p class="detail-description">Your website is your 24/7 digital salesperson. We don't just use basic templates; we build tailored, fast-loading, and mobile-optimized web stores designed specifically to convert browsers into buyers.</p>
+                        <ul class="detail-bullets">
+                            <li>Custom Shopify Theme Development</li>
+                            <li>Complete E-commerce Setup & Payment Integration</li>
+                            <li>Product Uploads & Categorization</li>
+                        </ul>
+                    </div>
+
+                    <!-- Marketing Panel -->
+                    <div class="service-detail-panel" id="detail-marketing">
+                        <div class="detail-icon">🚀</div>
+                        <h4 class="detail-title">High-ROI Meta Marketing</h4>
+                        <p class="detail-description">A beautiful store means nothing without traffic. We run expert-level Meta (Facebook & Instagram) ad campaigns to put your products in front of the exact people who want to buy them.</p>
+                        <ul class="detail-bullets">
+                            <li>Targeted Ad Creation & Copywriting</li>
+                            <li>A/B Testing & Audience Scaling</li>
+                            <li>Retargeting Campaigns for Abandoned Carts</li>
+                        </ul>
+                    </div>
+
+                    <!-- Management Panel -->
+                    <div class="service-detail-panel" id="detail-management">
+                        <div class="detail-icon">⚙️</div>
+                        <h4 class="detail-title">End-to-End E-commerce Management</h4>
+                        <p class="detail-description">Want a completely hands-off approach? We handle the entire online operation—from running the website to managing your marketing budget and generating daily sales reports.</p>
+                        <ul class="detail-bullets">
+                            <li>Daily Sales & Analytics Reporting</li>
+                            <li>Marketing Budget & Campaign Management</li>
+                            <li>Inventory & Product Performance Optimization</li>
+                            <li>Continuous Store & Ad Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">First Month Engagement Packages</h2>
+                <p class="section-subtitle text-center">Choose the plan that fits your launch goals and scale at your own pace.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Package 1: Starter Launch -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <span class="pricing-tag">Starter Launch</span>
+                        <div class="price">₨ 40,000</div>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 10px;">Best For: New businesses needing a basic digital footprint.</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Standard Shopify Setup (Up to 20 products)</li>
+                        <li>Basic Meta Ads Setup</li>
+                        <li>1 Month Technical Support</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn btn-pricing">Choose Starter</a>
+                    </div>
+                </div>
+
+                <!-- Package 2: Growth & Scale -->
+                <div class="pricing-card featured">
+                    <div class="featured-badge">RECOMMENDED</div>
+                    <div class="pricing-header">
+                        <span class="pricing-tag">Growth & Scale</span>
+                        <div class="price">₨ 80,000</div>
+                        <p style="font-size: 0.85rem; color: #ff80c0; margin-top: 10px;">Best For: Established stores ready to aggressively drive sales.</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Custom Shopify Design (Up to 100 products)</li>
+                        <li>Advanced Meta Ads Management & Scaling</li>
+                        <li>1 Month Store & Ad Optimization</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn btn-pricing">Choose Growth</a>
+                    </div>
+                </div>
+
+                <!-- Package 3: Full-Service Partner -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <span class="pricing-tag">Full-Service Partner</span>
+                        <div class="price">₨ 120,000</div>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 10px;">Best For: Brands wanting complete, hands-off online management.</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Fully Custom Web Store & Advanced Features</li>
+                        <li>Full Funnel Meta Ads + Retargeting</li>
+                        <li>Complete End-to-End Daily Management</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn btn-pricing">Become a Partner</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div style="margin-top: 50px; background: rgba(255,255,255,0.03); border: 1px dashed var(--glass-border); padding: 24px; border-radius: 12px; font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+                <strong style="color: var(--accent-pink);">Important Pricing Note:</strong> We don't believe in rigid, one-size-fits-all pricing. The rates above are estimated starting points for your first month. Final pricing is completely flexible and will be adjusted up or down based entirely on the complexity, product volume, and exact scope of work required for your specific business.
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container small-container">
+            <h2 class="section-title text-center">Let’s Build Your Online Empire</h2>
+            <p class="section-subtitle text-center">Stop leaving money on the table. Whether you are transitioning a physical retail shop to the web or scaling an existing online brand, we have the technical and marketing expertise to make it happen.</p>
+
+            <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); alert('Inquiry Sent Successfully!');">
+                <div class="form-group">
+                    <label class="form-label">I need help with...</label>
+                    <div class="tag-selector-container">
+                        <div class="selectable-tag active" data-value="Shopify Setup">Shopify Setup</div>
+                        <div class="selectable-tag" data-value="Meta Ads">Meta Ads Marketing</div>
+                        <div class="selectable-tag" data-value="Full Management">E-commerce Management</div>
+                        <div class="selectable-tag" data-value="Strategy Call">Strategy Consultation</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-textarea" placeholder="Tell us about your store, product categories, or business goals..." rows="5" required></textarea>
+                </div>
+
+                <div class="form-cta" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+                    <button type="submit" class="btn btn-submit">
+                        <span>Get Your Custom Quote Today</span>
+                    </button>
+                    
+                    <a href="https://wa.me/92309140100?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20e-commerce%20and%20Meta%20marketing%20services." 
+                       target="_blank" 
+                       class="nav-link" 
+                       style="font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; color: var(--accent-cyan);">
+                       <span>Have questions? Message us directly on WhatsApp (0309140100)</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 BUZZ Digital Agency. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    <span style="color: var(--glass-border); margin: 0 8px;">|</span>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
