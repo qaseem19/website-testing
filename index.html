@@ -38,41 +38,40 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1 class="hero-title">
-                <span class="fade-in-text">Take Your Business Online.</span><br>
-                <span class="gradient-text">Scale Your Sales Nationwide.</span>
-            </h1>
-            
-            <p class="hero-subtext" style="color: var(--text-secondary); max-width: 800px; margin: 0 auto 30px auto; font-size: 1.15rem; line-height: 1.6; font-family: var(--font-body);">
-                We help Pakistani retail businesses transition into high-converting e-commerce brands. From custom Shopify development to data-driven Meta marketing, we build and manage your entire digital storefront.
-            </p>
+    <!-- Hero Section / Scroll Track Container -->
+    <section class="scroll-container" id="scrollContainer">
+        <div class="sticky-wrapper" id="stickyWrapper">
+            <!-- Hero Text Header -->
+            <div class="container hero-text-container" id="heroTextContainer">
+                <h1 class="hero-title">
+                    <span class="fade-in-text">Take Your Business Online.</span><br>
+                    <span class="gradient-text">Scale Your Sales Nationwide.</span>
+                </h1>
+                
+                <p class="hero-subtext">
+                    We help Pakistani retail businesses transition into high-converting e-commerce brands. From custom Shopify development to data-driven Meta marketing, we build and manage your entire digital storefront.
+                </p>
 
-            <!-- Hero Ticker -->
-            <div class="ticker-container">
-                <div class="ticker-wrapper" id="tickerWrapper">
-                    <div class="ticker-item">Shopify Store Setup</div>
-                    <div class="ticker-item">Meta Ads Management</div>
-                    <div class="ticker-item">E-commerce Management</div>
-                    <div class="ticker-item">Marketing</div>
-                    <div class="ticker-item">Payment Gateway Integration</div>
+                <!-- Hero Ticker -->
+                <div class="ticker-container">
+                    <div class="ticker-wrapper" id="tickerWrapper">
+                        <div class="ticker-item">Shopify Store Setup</div>
+                        <div class="ticker-item">Meta Ads Management</div>
+                        <div class="ticker-item">E-commerce Management</div>
+                        <div class="ticker-item">Marketing</div>
+                        <div class="ticker-item">Payment Gateway Integration</div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div style="margin-bottom: 20px;">
+                    <a href="#contact" class="btn btn-submit" style="display: inline-flex; text-decoration: none;">Book Your Free Strategy Call</a>
                 </div>
             </div>
 
-            <!-- CTA Button -->
-            <div style="margin-bottom: 50px;">
-                <a href="#contact" class="btn btn-submit" style="display: inline-flex; text-decoration: none;">Book Your Free Strategy Call</a>
-            </div>
-
-            <!-- Hero Video Block -->
-            <div class="hero-video-container" id="heroVideoBlock">
-                <div class="video-overlay">
-                    <span class="play-hint">HOVER TO PLAY</span>
-                </div>
-                <!-- Royalty free high quality tech abstract video -->
-                <video id="heroVideo" class="hero-video" loop muted playsinline>
+            <!-- Target Video Box -->
+            <div class="video-box" id="videoBox">
+                <video id="heroVideo" class="hero-video" loop muted playsinline autoplay>
                     <source src="my-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>

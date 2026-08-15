@@ -28,11 +28,9 @@ html {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-body);
-    overflow-x: hidden;
 }
 
 body {
-    overflow-x: hidden;
     position: relative;
 }
 
@@ -119,6 +117,7 @@ body {
 .gradient-text {
     background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -227,72 +226,113 @@ body {
 /* -------------------------------------------------------------
    HERO SECTION
 ------------------------------------------------------------- */
-.hero-section {
-    padding: 180px 0 100px 0;
-    text-align: center;
+.scroll-container {
     position: relative;
+    width: 100%;
+    height: 300vh;
+}
+
+.sticky-wrapper {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+    z-index: 50;
+    padding-top: 60px;
+}
+
+.hero-text-container {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    z-index: 10;
+    will-change: opacity, transform, max-height;
+    overflow: hidden;
+    max-height: 600px;
 }
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: 4.8rem;
+    font-size: 4rem;
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.04em;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .fade-in-text {
     opacity: 0.95;
 }
 
+.hero-subtext {
+    color: var(--text-secondary);
+    max-width: 780px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: var(--font-body);
+}
+
 /* Vertical Ticker */
 .ticker-container {
-    height: 60px;
+    height: 52px;
     overflow: hidden;
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
 }
 
 .ticker-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
     transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .ticker-item {
-    height: 60px;
-    font-size: 2.2rem;
+    height: 52px;
+    font-size: 1.6rem;
     font-family: var(--font-heading);
     font-weight: 600;
     color: var(--text-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 52px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    width: 100%;
 }
 
-/* Video Block */
-.hero-video-container {
+/* Target Video Box */
+.video-box {
     position: relative;
-    width: 100%;
-    max-width: 1000px;
-    height: 480px;
-    margin: 0 auto;
+    width: 60vw;
+    height: 50vh;
     border-radius: 24px;
     overflow: hidden;
     border: 1px solid var(--glass-border);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    background: #000000;
+    will-change: width, height, border-radius;
 }
 
 .hero-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.05);
-    transition: transform 0.8s ease;
+    background: #000000;
 }
 
 .hero-video-container:hover .hero-video {
