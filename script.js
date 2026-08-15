@@ -61,8 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setInterval(() => {
                 currentTickerIndex++;
+                const itemHeight = originalItems[0].offsetHeight || 52;
                 tickerWrapper.style.transition = 'transform 0.6s cubic-bezier(0.76, 0, 0.24, 1)';
-                tickerWrapper.style.transform = `translateY(-${currentTickerIndex * ITEM_HEIGHT}px)`;
+                tickerWrapper.style.transform = `translateY(-${currentTickerIndex * itemHeight}px)`;
 
                 // When we reach the clone item at index === totalItems
                 if (currentTickerIndex === totalItems) {
@@ -281,14 +282,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================
-       CONTACT FORM SERVICE TAGS
+       MOBILE NAVIGATION MENU TOGGLE
        ========================================== */
-    const selectableTags = document.querySelectorAll('.selectable-tag');
-    
-    selectableTags.forEach(tag => {
-        tag.addEventListener('click', () => {
-            // Multi-select toggle
-            tag.classList.toggle('active');
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('mobile-active');
         });
-    });
+
+        // Close menu on link click
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navMenu.classList.remove('mobile-active');
+            });
+        });
+    }
 });

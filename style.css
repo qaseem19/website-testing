@@ -930,9 +930,46 @@ body {
 /* -------------------------------------------------------------
    RESPONSIVE LAYOUTS
 ------------------------------------------------------------- */
+/* Hamburger Button */
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0;
+}
+
+.mobile-toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: var(--transition-smooth);
+}
+
+.mobile-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* -------------------------------------------------------------
+   RESPONSIVE LAYOUTS & MOBILE OPTIMIZATIONS
+------------------------------------------------------------- */
 @media (max-width: 992px) {
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
     
     .work-grid {
@@ -960,24 +997,133 @@ body {
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        padding: 15px 0;
+    /* Touch devices cursor override */
+    @media (pointer: coarse) {
+        * {
+            cursor: auto !important;
+        }
+        .custom-cursor, .custom-cursor-dot {
+            display: none !important;
+        }
     }
-    
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .navbar {
+        padding: 14px 0;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
     .nav-menu {
-        display: none; /* Simplification for small screens */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80vw;
+        max-width: 320px;
+        height: 100vh;
+        background: rgba(13, 13, 17, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 100px 32px 40px 32px;
+        gap: 24px;
+        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border-left: 1px solid var(--glass-border);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.8);
+    }
+
+    .nav-menu.mobile-active {
+        right: 0;
+    }
+
+    .nav-menu .nav-link {
+        font-size: 1.25rem;
+        width: 100%;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
+        line-height: 1.25;
+        margin-bottom: 14px;
+    }
+
+    .hero-subtext {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+
+    .ticker-container {
+        height: 42px;
+        margin-bottom: 16px;
     }
 
     .ticker-item {
-        font-size: 1.6rem;
+        font-size: 1.15rem;
+        height: 42px;
+        line-height: 42px;
     }
 
-    .hero-video-container {
-        height: 300px;
+    .video-box {
+        width: 92vw !important;
+        height: 36vh !important;
+    }
+
+    .sound-toggle {
+        bottom: 14px;
+        right: 14px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .sound-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .work-section, .services-section, .pricing-section, .contact-section {
+        padding: 60px 0;
+    }
+
+    .services-right {
+        padding: 24px;
+        min-height: auto;
+    }
+
+    .detail-title {
+        font-size: 1.5rem;
+    }
+
+    .pricing-card {
+        padding: 28px 20px;
+    }
+
+    .price {
+        font-size: 1.9rem;
+    }
+
+    .contact-form {
+        padding: 24px 16px;
+        border-radius: 16px;
     }
 
     .form-row {
@@ -989,9 +1135,32 @@ body {
         margin-bottom: 20px;
     }
 
+    .selectable-tag {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
     .footer-bottom {
         flex-direction: column;
         gap: 16px;
         text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 0.9rem;
     }
 }
